@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "FreshCart",
+    "slug": "freshcart",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "scheme": "freshcart",
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "FreshCart uses the camera for delivery proof photos.",
+        "NSPhotoLibraryUsageDescription": "FreshCart uses your photos for delivery proof and product images."
+      }
+    },
+    "android": {
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_MEDIA_IMAGES"
+      ],
+      "package": "pk.freshcart.app",
+      "googleServicesFile": "./google-services.json"
+    },
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow FreshCart to access photos for delivery proof.",
+          "cameraPermission": "Allow FreshCart to take delivery proof photos.",
+          "microphonePermission": false
+        }
+      ],
+      "expo-status-bar",
+      [
+        "expo-notifications",
+        {
+          "defaultChannel": "default",
+          "enableBackgroundRemoteNotifications": false
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "891b53de-9c07-4758-b06a-da84860e515f"
+      }
+    },
+    "owner": "azeem336"
+  }
+}
